@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es-AR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{TITULO}} | Distribuidora Makenke · El Calafate</title>
+<meta name="description" content="{{DESCRIPCION}}">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Outfit:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/base.css">
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body data-landing="{{SLUG}}" data-wa-text="Hola Makenke, quiero consultar por {{PRODUCTO}}">
+<header><div class="wrap"><a href="#top"><img src="/assets/img/brand/logo-makenke.jpg" alt="Distribuidora Makenke"></a><a class="btn" href="#visitanos">Vení al local</a></div></header>
+<div class="guard"></div>
+<main id="top">
+
+<!-- 1. PORTADA: una promesa clara para UN público. Máximo 8 palabras en el título. -->
+<div class="hero"><div class="wrap">
+<span class="badge mono">Distribuidor oficial · {{MARCA}}</span>
+<h1>{{TITULO}} <em>{{TITULO_DESTACADO}}</em></h1>
+<p class="lead">{{BAJADA}}</p>
+<div class="cta"><a class="btn" data-link="wa" href="#visitanos">Consultar por WhatsApp</a><a class="btn o" href="#productos">Ver productos</a></div>
+</div></div>
+
+<!-- 2. PRODUCTOS: copiá el bloque <article class="prod"> de limpieza-cocina-profesional -->
+<section id="productos"><div class="wrap">
+<h2>{{TITULO_PRODUCTOS}}</h2>
+<p class="sub">{{SUBTITULO_PRODUCTOS}}</p>
+<!-- <article class="prod"> ... </article> -->
+</div></section>
+
+<!-- 3. (opcional) Accesorios, pasos, preguntas frecuentes: usá las clases .card .grid3 .acc .steps -->
+
+<!-- 4. CIERRE: igual en todas las landings -->
+<section id="visitanos"><div class="wrap">
+<div class="visit"><div>
+<span class="mono">Te invitamos a conocernos</span>
+<h2>Vení al local</h2>
+<p class="addr">Av. 17 de Octubre 1231</p>
+<p>El Calafate, Santa Cruz</p>
+<p class="hrs" style="margin-top:14px"><b>Lun a Vie</b> 9:30 a 13:30 y 15 a 19 hs<br><b>Sáb</b> 9:30 a 13:30 hs</p>
+</div><div style="display:flex;flex-direction:column;gap:12px;justify-content:center">
+<a class="btn" data-link="maps" href="#">Cómo llegar</a>
+<a class="btn o" data-link="tel" href="#">Llamar 02902 41-7768</a>
+<a class="btn o" data-link="ig" href="#">@distribuidoramakenkecalafate</a>
+</div></div></div></section>
+</main>
+<div class="guard"></div>
+<footer><div class="wrap"><img src="/assets/img/brand/logo-makenke.jpg" alt="Distribuidora Makenke"><p>Distribuidor oficial de {{MARCA}} · El Calafate, Santa Cruz</p><p>Tel. 02902 41-7768</p></div></footer>
+<script src="/assets/js/main.js" defer></script>
+</body></html>

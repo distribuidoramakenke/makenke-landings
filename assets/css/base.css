@@ -1,0 +1,80 @@
+/* Estilos compartidos de todas las landings Makenke */
+:root{--y:#EFBE00;--k:#141310;--k2:#1d1b17;--p:#ECEBE6;--w:#fff}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Outfit,system-ui,sans-serif;background:var(--k);color:var(--p);line-height:1.5;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.t{font-family:"Titan One",Outfit,sans-serif;font-weight:400;line-height:1.05}
+.mono{font-family:"IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;font-size:.78rem}
+.btn{display:inline-block;background:var(--y);color:var(--k);font-weight:700;text-decoration:none;padding:14px 26px;border-radius:999px;font-size:1.02rem;border:2px solid var(--y);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.o{background:transparent;color:var(--y)}
+.guard{height:14px;background:repeating-linear-gradient(90deg,var(--y) 0 14px,transparent 14px 28px);opacity:.9}
+header{position:sticky;top:0;z-index:9;background:rgba(20,19,16,.94);backdrop-filter:blur(8px);border-bottom:1px solid #2b2822}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px}
+header img{height:38px;width:auto;border-radius:4px}
+header .btn{padding:9px 18px;font-size:.92rem}
+.hero{padding:56px 0 48px;text-align:center}
+.hero .iso{display:flex;justify-content:center;margin-bottom:18px}
+.hero h1{font-size:clamp(2.4rem,7.5vw,4.6rem);color:var(--w);margin:14px 0 16px}
+.hero h1 em{font-style:normal;color:var(--y)}
+.hero p.lead{max-width:640px;margin:0 auto 26px;font-size:1.15rem;color:#cfcdc4}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.badge{display:inline-block;border:1px solid var(--y);color:var(--y);padding:6px 14px;border-radius:999px}
+section{padding:60px 0}
+section.alt{background:var(--k2)}
+h2{font-size:clamp(1.8rem,5vw,2.8rem);color:var(--w);margin-bottom:10px}
+h2 em{font-style:normal;color:var(--y)}
+.sub{color:#b9b7ad;max-width:640px;margin-bottom:30px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--k2);border:1px solid #2f2c25;border-radius:16px;padding:22px}
+section.alt .card{background:var(--k);}
+.card h3{font-size:1.25rem;color:var(--y);margin-bottom:8px}
+.prod{display:grid;grid-template-columns:230px 1fr;gap:28px;align-items:center;background:var(--p);color:var(--k);border-radius:20px;padding:26px;margin-bottom:20px}
+.prod .ph{background:#fff;border-radius:14px;padding:10px;display:flex;justify-content:center}
+.prod .ph img{max-height:300px;width:auto;object-fit:contain}
+.prod h3{font-size:2rem;color:var(--k)}
+.prod .tag{display:inline-block;background:var(--k);color:var(--y);padding:4px 12px;border-radius:999px;margin-bottom:10px}
+.prod ul{padding-left:18px;margin:10px 0}
+.prod li{margin:3px 0}
+.dil{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.dil span{background:var(--y);color:var(--k);font-weight:700;border-radius:10px;padding:8px 14px}
+.dil small{display:block;font-weight:500;font-size:.72rem}
+.fine{font-size:.85rem;color:#555}
+.prod a.fl{font-weight:600;color:var(--k)}
+.acc{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+figure{background:#fff;border-radius:14px;padding:10px;color:var(--k);text-align:center}
+figure img{height:110px;width:100%;object-fit:contain}
+figcaption{font-size:.82rem;font-weight:600;margin-top:8px;line-height:1.25}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.steps .card{position:relative;padding-top:54px}
+.steps .card::before{counter-increment:s;content:counter(s);position:absolute;top:14px;left:22px;font-family:"Titan One";font-size:1.8rem;color:var(--y)}
+.visit{background:var(--y);color:var(--k);border-radius:24px;padding:36px;display:grid;grid-template-columns:1.2fr 1fr;gap:28px}
+.visit h2{color:var(--k)}
+.visit .addr{font-family:"Titan One";font-size:clamp(1.6rem,4.5vw,2.4rem);line-height:1.1;margin:8px 0}
+.visit .btn{background:var(--k);color:var(--y);border-color:var(--k)}
+.visit .btn.o{background:transparent;color:var(--k)}
+.hrs b{display:inline-block;min-width:70px}
+footer{padding:30px 0 40px;text-align:center;color:#8f8d84;font-size:.85rem}
+footer img{height:34px;margin:0 auto 10px;border-radius:4px}
+@media(max-width:720px){.prod{grid-template-columns:1fr}.visit{grid-template-columns:1fr;padding:26px}.prod .ph img{max-height:220px}}
+.kick{color:#b9b7ad;margin-top:16px}
+.wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:20;display:flex;align-items:center;gap:10px;background:#25D366;color:#073b1b;text-decoration:none;font-weight:700;padding:13px 20px 13px 16px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.45);animation:pulse 2.6s infinite}
+.wa svg{width:26px;height:26px;flex:none}
+@keyframes pulse{0%{box-shadow:0 8px 24px rgba(0,0,0,.45),0 0 0 0 rgba(37,211,102,.55)}70%,100%{box-shadow:0 8px 24px rgba(0,0,0,.45),0 0 0 16px rgba(37,211,102,0)}}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes flo{50%{transform:translateY(-6px)}}
+@keyframes slide{to{background-position:28px 0}}
+.hero .iso{animation:flo 4s ease-in-out infinite}
+.hero .wrap>*{animation:up .8s both}
+.hero .wrap>*:nth-child(2){animation-delay:.1s}.hero .wrap>*:nth-child(3){animation-delay:.2s}.hero .wrap>*:nth-child(4){animation-delay:.3s}.hero .wrap>*:nth-child(5){animation-delay:.4s}.hero .wrap>*:nth-child(6){animation-delay:.5s}
+.guard{animation:slide 3s linear infinite}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+.card,figure,.prod{transition:transform .25s ease,box-shadow .25s ease}
+.card:hover,figure:hover{transform:translateY(-4px)}
+.prod:hover{box-shadow:0 14px 34px rgba(0,0,0,.4)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+@media(max-width:720px){.wa span{display:none}.wa{padding:14px}}
