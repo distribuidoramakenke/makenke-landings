@@ -16,8 +16,11 @@ header{position:sticky;top:0;z-index:9;background:rgba(20,19,16,.94);backdrop-fi
 header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px}
 header img{height:38px;width:auto;border-radius:4px}
 header .btn{padding:9px 18px;font-size:.92rem}
-.hero{padding:56px 0 48px;text-align:center}
-.hero .iso{display:flex;justify-content:center;margin-bottom:18px}
+.hero{position:relative;overflow:hidden;isolation:isolate;padding:64px 0 72px;text-align:center}
+.hero-bg{position:absolute;left:0;right:0;top:-12%;height:124%;z-index:-1;background:linear-gradient(180deg,rgba(20,19,16,.55) 0%,rgba(20,19,16,.36) 45%,rgba(20,19,16,.9) 100%),var(--hero-img,none) center/cover no-repeat;will-change:transform}
+.hero .wrap{will-change:transform,opacity}
+.hero .iso{display:flex;justify-content:center;margin-bottom:22px}
+.hero .iso img{width:clamp(170px,32vw,250px);height:auto;filter:drop-shadow(0 4px 14px rgba(0,0,0,.55))}
 .hero h1{font-size:clamp(2.4rem,7.5vw,4.6rem);color:var(--w);margin:14px 0 16px}
 .hero h1 em{font-style:normal;color:var(--y)}
 .hero p.lead{max-width:640px;margin:0 auto 26px;font-size:1.15rem;color:#cfcdc4}
@@ -67,7 +70,7 @@ footer img{height:34px;margin:0 auto 10px;border-radius:4px}
 @keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 @keyframes flo{50%{transform:translateY(-6px)}}
 @keyframes slide{to{background-position:28px 0}}
-.hero .iso{animation:flo 4s ease-in-out infinite}
+.hero .iso{animation:flo 5s ease-in-out infinite}
 .hero .wrap>*{animation:up .8s both}
 .hero .wrap>*:nth-child(2){animation-delay:.1s}.hero .wrap>*:nth-child(3){animation-delay:.2s}.hero .wrap>*:nth-child(4){animation-delay:.3s}.hero .wrap>*:nth-child(5){animation-delay:.4s}.hero .wrap>*:nth-child(6){animation-delay:.5s}
 .guard{animation:slide 3s linear infinite}

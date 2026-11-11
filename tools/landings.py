@@ -2,7 +2,7 @@
 """Herramientas del repo de landings Makenke.
 
   python tools/landings.py nueva <slug>      crea una landing nueva desde _plantilla
-  python tools/landings.py indice            regenera el índice interno (index.html)
+  python tools/landings.py indice            regenera el índice interno (indice/index.html; la home index.html se edita a mano)
   python tools/landings.py imagenes <origen> <destino>   convierte fotos a WebP liviano (máx. 800 px)
 
 Ejemplo:
@@ -13,7 +13,7 @@ import re, sys, shutil
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
-EXCLUIR = {"assets", "tools", "node_modules"}
+EXCLUIR = {"assets", "tools", "node_modules", "indice"}
 
 
 def landings():
@@ -37,7 +37,8 @@ a{{color:#EFBE00}}li{{margin:14px 0}}code{{color:#8f8d84;font-size:.85em}}</styl
 <h1>Landings Makenke</h1><p>Índice interno. Cada campaña apunta a una de estas páginas.</p><ul>
 {items}
 </ul></body></html>'''
-    (RAIZ / "index.html").write_text(html, encoding="utf-8")
+    (RAIZ / "indice").mkdir(exist_ok=True)
+    (RAIZ / "indice" / "index.html").write_text(html, encoding="utf-8")
     print("Índice actualizado:", ", ".join(p.name for p in landings()))
 
 
