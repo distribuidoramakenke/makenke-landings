@@ -7,6 +7,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Outfit:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/base.css">
 <style>
+.hero-bg{background:linear-gradient(180deg,rgba(20,19,16,.78) 0%,rgba(20,19,16,.66) 50%,rgba(20,19,16,.92) 100%),var(--hero-img,none) center/cover no-repeat}
+.local{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center}
+.local img{border-radius:22px;width:100%;height:100%;max-height:420px;object-fit:cover;box-shadow:0 0 0 4px var(--y)}
+@media(max-width:760px){.local{grid-template-columns:1fr}}
 .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
 .tile{display:flex;flex-direction:column;text-decoration:none;background:var(--p);color:var(--k);border-radius:22px;overflow:hidden;transition:transform .2s,box-shadow .2s;box-shadow:0 0 0 0 var(--y)}
 .tile:hover{transform:translateY(-4px);box-shadow:0 0 0 4px var(--y)}
@@ -30,7 +34,7 @@
 <header><div class="wrap"><a href="#top"><img src="/assets/img/brand/logo-makenke.jpg" alt="Distribuidora Makenke"></a><a class="btn" href="#visitanos">Vení al local</a></div></header>
 <div class="guard"></div>
 <main id="top">
-<div class="hero"><div class="hero-bg" data-parallax style="--hero-img:url(/assets/img/home/fondo-cocina.webp)" aria-hidden="true"></div><div class="wrap" data-parallax-content>
+<div class="hero"><div class="hero-bg" data-parallax style="--hero-img:url(/assets/img/home/frente.webp)" aria-hidden="true"></div><div class="wrap" data-parallax-content>
 <span class="badge mono">El Calafate · Santa Cruz</span>
 <p class="mono kick" style="margin-top:18px;color:#cfcdc4">Hoteles · Restaurantes · Comercios</p>
 <h1>Limpieza y descartables<br><em>para quienes trabajan en serio.</em></h1>
@@ -57,6 +61,11 @@
 <div class="card"><h3>Stock en el local</h3><p>Te llevás los productos en el momento, sin esperar envíos.</p></div>
 <div class="card"><h3>Te asesoramos</h3><p>Te recomendamos el producto y la dilución justa para lo que limpiás.</p></div>
 <div class="card"><h3>Para tu negocio</h3><p>Hoteles, hostels, restaurantes, bares y comercios de la zona.</p></div>
+</div></div></section>
+
+<section><div class="wrap"><div class="local">
+<img loading="lazy" src="/assets/img/home/frente.webp" alt="Frente del local de Distribuidora Makenke en El Calafate">
+<div><span class="mono y" style="color:var(--y)">Conocé el local</span><h2 style="margin-top:8px">Pasá a <em>vernos</em></h2><p class="sub" style="margin-bottom:18px">Estamos en Av. 17 de Octubre 1231, El Calafate. Entrá, mirá los productos y te asesoramos en el momento.</p><a class="btn" data-link="maps" href="#">Cómo llegar</a></div>
 </div></div></section>
 
 <section id="visitanos"><div class="wrap">
